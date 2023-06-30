@@ -6,6 +6,11 @@ public class Billboard : MonoBehaviour
 {
     public Transform target;
 
+
+    private void Awake()
+    {
+        target = GameManager.Instance.player.transform;
+    }
     private void Update()
     {
         //자신의 방향을  카메라의 방향과 일치 시킨다.
